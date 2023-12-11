@@ -29,8 +29,8 @@ pipeline {
                   docker  run --rm sixeyed/pi-psod
                   git version
                   docker version
-                  sixeyed/pi-psod  --list-sdks
-                  sixeyed/pi-psod  --list-runtimes
+                  dotnet  --list-sdks
+                  dotnet  --list-runtimes
                 '''
             }
         }
