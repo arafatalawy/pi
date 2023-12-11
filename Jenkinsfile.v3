@@ -13,6 +13,7 @@ pipeline {
                     reuseNode true
                 }
             }
+           }
 
         stage('Audit tools') {                        
             steps {
