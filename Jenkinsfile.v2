@@ -28,8 +28,8 @@ pipeline {
                 sh '''
                   git version
                   docker version
-                  dotnet --list-sdks
-                  dotnet --list-runtimes
+                  sixeyed/pi-psod  --list-sdks
+                  sixeyed/pi-psod  --list-runtimes
                 '''
             }
         }
