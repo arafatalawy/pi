@@ -26,7 +26,7 @@ pipeline {
 
             steps {
                 sh '''
-                  docker container run --rm sixeyed/pi-psod
+                  docker  run --rm sixeyed/pi-psod
                   git version
                   docker version
                   sixeyed/pi-psod  --list-sdks
