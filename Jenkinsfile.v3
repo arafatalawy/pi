@@ -1,16 +1,12 @@
 pipeline {
-    agent any
-    environment {
-        VERSION = "0.1.0"        
-        VERSION_RC = "rc.2"
-    }
-    stages{
             agent {
                 docker {
                     image "mcr.microsoft.com/dotnet/core/sdk:3.1.101"
                   
                 }
             }
+    stages{
+
         stage('Audit tools') {   
 
             steps {
