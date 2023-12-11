@@ -4,18 +4,15 @@ pipeline {
         VERSION = "0.1.0"        
         VERSION_RC = "rc.2"
     }
-    stages {
 
-        stage("Lint") {
+
+        stage('Audit tools') {   
             agent {
                 docker {
                     image "mcr.microsoft.com/dotnet/core/sdk:3.1.101"
                     reuseNode true
                 }
             }
-           }
-
-        stage('Audit tools') {                        
             steps {
                 sh '''
                   git version
