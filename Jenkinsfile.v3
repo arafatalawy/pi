@@ -9,7 +9,7 @@ pipeline {
         stage("Lint") {
             agent {
                 docker {
-                    image "mcr.microsoft.com/dotnet/core/sdk"
+                    image "mcr.microsoft.com/dotnet/core/sdk:3.1.101"
                     reuseNode true
                 }
             }
