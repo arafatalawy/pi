@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Push') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'dockerHub', usernameVariable: 'arafatalawi', passwordVariable: 'kingdom123/')]) {                      
+                withCredentials([usernamePassword(credentialsId: 'dockerHub', usernameVariable: 'arafatalawi', passwordVariable: '')]) {                      
                     sh '''
                       docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
                       docker image push sixeyed/pi-psod
