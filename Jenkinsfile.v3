@@ -5,6 +5,15 @@ pipeline {
         VERSION_RC = "rc.2"
     }
     stages {
+
+        stage("Lint") {
+            agent {
+                docker {
+                    image "mcr.microsoft.com/dotnet/core/sdk"
+                    reuseNode true
+                }
+            }
+
         stage('Audit tools') {                        
             steps {
                 sh '''
@@ -15,5 +24,6 @@ pipeline {
                 '''
             }
         }
+
 }
 }
